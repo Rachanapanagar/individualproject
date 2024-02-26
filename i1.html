@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css" />
+
+    <script>
+      function myfunction(e) {
+        console.log(e);
+
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        let loginData = {
+          username: username,
+          password: password,
+        };
+
+       
+        // alert(JSON.stringify(loginData));
+
+        fetch("http://127.0.0.1:3000/login", {
+          method: "POST",
+          body: JSON.stringify(loginData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          // body: JSON.stringify(loginData),
+          // Handle the error appropriately, maybe show an error message to the user.
+        })
+          // .then((res) => {
+          //   // console.log("jijjij");
+          //   res.json().then((data) => {
+          //     if (data.success) {
+
+          //       alert("logged successfully");
+          //       window.location.href= "i2.html";
+          //     } else {
+          //       alert(data.message);
+          //     }
+          //   });
+          // })
+          // .catch((err) => {
+          //   console.log(err);
+          // });
+          window.location.href= "i2.html";
+      }
+      
+        //  window.location.href='i2.html';
+   
+        
+      
+    </script>
+  </head>
+  <body>
+    <center>
+      <h1>LogIn</h1>
+          
+    
+      <div class="login">
+        <label for="email">Username</label>
+        <input
+          id="username"
+          type="email"
+          name="email"
+          placeholder="Username"
+          required
+        /><br />
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          required
+        /><br />
+        <button class="btn" onclick="myfunction()">LogIn</button>
+        
+      </div>
+ 
+    </center>
+  </body>
+</html>

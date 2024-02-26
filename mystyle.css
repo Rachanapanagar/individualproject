@@ -1,0 +1,48 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}.login {
+  
+    border: 3px solid rgb(14, 2, 2);
+    width: 30%;
+    padding: 30px;
+    margin: 30px;
+
+    position: static;
+    /* background-color: rgb(165, 205, 239); */
+    align-items: center;
+    background: transparent;
+  }
+  .h1
+  {
+    height: 200px;
+  }
+  input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    position: relative;
+  }
+  .btn {
+   background: transparent;
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 1opx;
+    position: relative;
+    margin: 10px;
+  }
+  .btn:hover {
+    background-color: grey;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  body {
+  
+      background-image: url("https://i0.wp.com/www.codepel.com/wp-content/uploads/2023/03/Animated-Website-Background-With-Html5.png?fit=1280%2C960&ssl=1");
+    /* background-color: rgb(244, 235, 240); */
+  }
+  
